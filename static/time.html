@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time</title>
+</head>
+<body>
+  <h2 id="time">...</h2>
+  <div>
+    <a href="index.html">Date and time</a>
+    <a href="date.html">Only date</a>
+    <a href="time.html">Only time</a>
+  </div>
+</body>
+<script>
+    function updateTime() {
+        const now = new Date();
+        document.getElementById("time").innerHTML = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        updateTime();
+        setInterval(updateTime, 1000); // Update every second
+    });
+</script>
+
+
+</html>
